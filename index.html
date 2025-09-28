@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AllProperly — Milestone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" type="text/css">
+  <style>
+    /* Mobile responsive */
+    @media only screen and (max-width:600px) {
+      .container { width:100% !important; padding:12px !important; }
+      .stack-column, .stack-column td { display:block !important; width:100% !important; text-align:center !important; }
+      .hero-img { width:100% !important; height:auto !important; }
+      .stats-col { display:block !important; width:100% !important; padding:12px 0 !important; }
+    }
+  </style>
+</head>
+<body style="background:#475567; margin:0; padding:20px; font-family:Nunito, Arial, sans-serif;">
+
+  <!-- Wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
+
+        <!-- Container -->
+        <table role="presentation" width="650" class="container" cellpadding="0" cellspacing="0" border="0" style="max-width:650px; width:100%; background:#ffffff; border:1px solid #e4e9f0; border-radius:10px; padding:20px;">
+          
+          <!-- Logo -->
+          <tr>
+            <td align="center" style="padding:18px 0;">
+              <a href="https://app.allproperly.com/dashboard" target="_blank" style="text-decoration:none;">
+                <img src="images/logo.png" alt="AllProperly" width="200" style="display:block; border:0; outline:none; text-decoration:none;">
+              </a>
+            </td>
+          </tr>
+
+          <!-- Headline -->
+          <tr>
+            <td align="center" style="padding:6px 20px 4px;">
+              <div style="color:#475567; font-size:22px; font-weight:700; line-height:28px;">
+                Congratulations, <span style="color:#475567;">{{userName}}</span>!
+              </div>
+            </td>
+          </tr>
+
+          <!-- Subheadline (dynamic) -->
+          <tr>
+            <td align="center" style="padding:0 20px 18px;">
+              <div style="color:#475567; font-size:16px; line-height:22px;">
+                You just unlocked a new milestone in AllProperly — great work keeping your home in top shape.
+              </div>
+            </td>
+          </tr>
+
+          <!-- Hero image -->
+          <tr>
+            <td align="center" style="padding:6px 20px 18px;">
+              <!-- Put your celebratory image here (650px wide recommended) -->
+              <img class="hero-img" src="images/milestone.png" alt="Milestone Celebration" width="550" style="max-width:100%; display:block; border:0; outline:none; text-decoration:none; border-radius:8px;">
+            </td>
+          </tr>
+
+          <!-- Milestone content block (choose one variant by replacing the placeholder / dynamically render) -->
+          <!-- Variant A: Property-count milestone -->
+          <tr>
+            <td style="padding:10px 20px 8px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f5f8f6; border:1px solid #e4e9f0; border-radius:10px;">
+                <tr>
+                  <td style="padding:18px; text-align:left; color:#475567;">
+                    <div style="font-size:16px; font-weight:700; padding-bottom:6px;">You’ve added your <span style="color:#7baa98;">{{propertyCount}}<sup>th</sup></span> property</div>
+                    <div style="font-size:14px; line-height:20px; color:#475567;">
+                      Nice work — building your property list helps you track maintenance, documents, and finances all in one place. Click below to view the property or invite collaborators.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding:12px 18px 18px;">
+                    <a href="https://app.allproperly.com/properties" target="_blank" style="background:#7baa98; color:#ffffff; text-decoration:none; font-size:15px; font-weight:600; padding:10px 22px; border-radius:8px; display:inline-block;">
+                      View Property →
+                    </a>
+                    <a href="https://app.allproperly.com/share" target="_blank" style="margin-left:12px; color:#475567; text-decoration:none; font-size:14px; padding:10px 18px; border-radius:8px; display:inline-block; border:1px solid #e4e9f0; background:transparent;">
+                      Invite Collaborators
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- OR Variant B: Home health milestone - alternate block (comment out or dynamically show one) -->
+          
+          <tr>
+            <td style="padding:10px 20px 8px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f5f8f6; border:1px solid #e4e9f0; border-radius:10px;">
+                <tr>
+                  <td style="padding:18px; text-align:left; color:#475567;">
+                    <div style="font-size:16px; font-weight:700; padding-bottom:6px;">Your Home Health is <span style="color:#7baa98;">{{homeHealth}}%</span></div>
+                    <div style="font-size:14px; line-height:20px; color:#475567;">
+                      Excellent! Your Home Health Barometer is at <strong>{{homeHealth}}%</strong>, reflecting completed tasks and up-to-date system records. Keep going — small steps prevent big repairs.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding:12px 18px 18px;">
+                    <!-- Inline progress bar visual (renders in email clients) -->
+                    <!-- <div style="width:320px; max-width:100%; margin:0 auto; background:#e9f0ed; border-radius:999px; padding:6px;">
+                      <div style="width:{{homeHealth}}%; background:#7baa98; height:12px; border-radius:999px;"></div>
+                    </div> -->
+                    <div style="padding-top:10px;">
+                      <a href="https://app.allproperly.com/dashboard" target="_blank" style="background:#7baa98; color:#ffffff; text-decoration:none; font-size:15px; font-weight:600; padding:10px 22px; border-radius:8px; display:inline-block;">
+                        View Home Health →
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Optional: Quick tips / next steps -->
+          <tr>
+            <td style="padding:18px 20px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef4f2; border-radius:10px;">
+                <tr>
+                  <td style="padding:16px; text-align:left; color:#475567; font-size:14px; line-height:20px;">
+                    <strong>Tips to keep momentum:</strong>
+                    <ul style="margin:8px 0 0 18px; padding:0; color:#475567; font-size:14px; line-height:20px;">
+                      <li>Schedule recurring tasks so nothing slips through the cracks.</li>
+                      <li>Upload receipts and manuals to the Document Vault for quick access.</li>
+                      <li>Invite a family member or manager to help with task completion.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Social / Share CTA -->
+          <tr>
+            <td align="center" style="padding:18px 20px 10px;">
+              <a href="https://app.allproperly.com/share" target="_blank" style="background:transparent; color:#475567; text-decoration:none; font-size:14px; padding:10px 16px; border-radius:8px; display:inline-block; border:1px solid #e4e9f0;">
+                Share your achievement
+              </a>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding:18px 20px 6px; color:#475567; font-size:14px; line-height:20px;">
+              You’re receiving this email because you use AllProperly to manage properties and maintenance.
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:0 20px 22px; color:#475567; font-size:14px; line-height:20px;">
+              © 2025 All Properly LLC. |
+              <a href="#" target="_blank" style="color:#6A8976; text-decoration:none;">Unsubscribe</a>
+            </td>
+          </tr>
+
+        </table>
+        <!-- End Container -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- End Wrapper -->
+
+</body>
+</html>
